@@ -1,5 +1,14 @@
+$maxWidthContainer: 1180;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
 .header{
     background:url('../img/Подложка2.jpg') top no-repeat;
+
+    @media(max-width: $md3 + px){
+        background:url('../img/Подложка2.jpg') 0 -20px no-repeat;
+    }
 }
 
 
@@ -11,20 +20,57 @@
         display:flex;
         align-items: center;
         height: 90px;
+
+        @media(max-width:$md3 +px){
+            height:70px;
+        }
+    }
+
+    &__logo{
+        display:inline-block;
+
+        @media(max-width:$md3 + px){
+            width:100px;
+            img{
+                max-width:100%;
+            }
+        }
     }
 
     &__column{
         flex:0 1 50%;
         &_logo{
-            align-self: flex-start;
-            padding:25px 0 0 0;
+            
             flex:0 0 190px;
             text-align: center;
+            @media(min-width:$md3 + px){
+                align-self: flex-start;
+                padding:25px 0 0 0;
+            }
         }
     }
 }
 
 .menu{
+
+    &__body{
+        @media(max-width:$md2 + px){
+            display:none;
+            position:fixed;
+            height:100%;
+            width:100%;
+            top:0;
+            left:0;
+            overflow: auto;
+            z-index:2;
+            padding:80px 20px 30px 20px;
+            background-color: #14c0d4;
+           &._active{
+               display:block;
+           }
+        }
+     
+    }
     &__list{
        display:grid;
        grid-template-columns: 110px 130px 180px;
@@ -32,6 +78,9 @@
         margin:1px 0;
        }
       
+       @media(max-width:1200px){
+           grid-template-columns: 90px 110px 160px;
+       }
        
     }
 
@@ -48,6 +97,9 @@
         text-decoration: underline;
         color:#fff;
         
+        @media(max-width:1200px){
+            padding: 5px 10px;
+        }
        
 
         &:hover{
@@ -61,13 +113,34 @@
 .contacts-header{
     display:flex;
     justify-content: center;
+    @media(max-width:$md2 + px){
+        justify-content: flex-end;
+    }
+
 
     &__column{
         padding: 0 30px;
-        border-right:1px solid #fff;
+        border-left:1px solid #fff;
 
-        &:last-child{
+       
+        
+
+        &:first-child{
             border:0;
+        }
+
+        @media(max-width:1200px){
+            padding:0 15px;
+        }
+
+        @media(max-width:640px){
+            padding:0;
+        }
+
+        @media(max-width: $md2 +px){
+            &:last-child{
+                display:none;
+            }
         }
     }
 
@@ -75,6 +148,15 @@
         &_icon{
             background:url('../img/Иконка1.png') left no-repeat;
             padding: 0 0 0 37px;
+            @media(max-width:1200px){
+                padding: 0 0 0 25px;
+            }
+            @media(max-width:640px){
+                background:none;
+                padding:0;
+            }
+
+
         }
     }
 
@@ -83,12 +165,33 @@
         font-weight: 300;
         color:#fff;
         margin: 0 0 5px 0;
+
+        @media(max-width:640px){
+            display:none;
+        }
     }
 
     &__phone{
         color:#fff;
         font-size: 18px;
         font-weight: 700;
+        white-space: nowrap;
+
+        @media(max-width:1200px){
+            font-size:16px;
+        }
+
+        @media(max-width:640px){
+            font-size:0;
+            background:url('../img/Иконка1.png') left no-repeat;
+            width:19px;
+            height:25px;
+            display:inline-block;
+            vertical-align: middle;
+
+        }
+
+        
     }
 
 }
@@ -114,43 +217,58 @@
     li{
         padding: 0 54px 0 0;
         @media(max-width: $maxWidthContainer +px){
-            padding: 0 54 / $maxWidthContainer * 100vw 0 0;
+            padding: 0 30 / $maxWidthContainer * 100vw 0 0;
         }
+
+       
         
     }
 
-    &__login{
-        background: url('../img/Иконка2.png') left no-repeat;
-        line-height: 24px;
-        display:inline-block;
+    &__item{
         padding: 0 0 0 36px;
+        line-height: 24px;
+        display:inline-block; 
         color:#999999;
+        transition:all .3s linear;
         span{
-            border-bottom: 1px dotted #000;
+            border-bottom: 1px dotted #999999;
         }
+        
+        
+        &_login{
+            background: url('../img/Иконка2.png') left no-repeat;
+            
+        }
+        
+        &_req{
+            background: url('../img/Иконка\ при\ наведении.png') left no-repeat;
+            
+            
+            
+        }
+        
+        &_email{
+            background: url('../img/Иконка3.png') left no-repeat;
+            span{
+                border-bottom: 1px solid;
+            }
+        }  
+        @media(max-width:1200px){
+            padding: 0 0 0 30px;
+            &:hover{
+                span{
+                    border-bottom: 1px dotted  #1ab9ce;
+                    color: #1ab9ce;
+                }
+            }
+
+        }
+        @media(max-width: $md2 + px){
+            padding:0;
+            background:none;
+         }
     }
 
-    &__req{
-        background: url('../img/Иконка\ при\ наведении.png') left no-repeat;
-        line-height: 24px;
-        display:inline-block;
-        padding: 0 0 0 36px;
-        span{
-            border-bottom: 1px dotted  #1ab9ce;
-            color: #1ab9ce;
-        }
-    }
-
-    &__email{
-        background: url('../img/Иконка3.png') left no-repeat;
-        line-height: 13px;
-        display:inline-block;
-        padding: 0 0 0 36px;
-        span{
-            border-bottom: 1px solid #1ab9ce;
-            color: #1ab9ce;
-        }
-    }
 }
 
 .info-header{
@@ -161,7 +279,7 @@
     &__column{
         padding: 0 54px 0 0;
         @media(max-width: $maxWidthContainer +px){
-            padding: 0 54 / $maxWidthContainer *100vw 0 0;
+            padding: 0 30 / $maxWidthContainer *100vw 0 0;
 
         }
         &:last-child{
@@ -175,11 +293,17 @@
         color: #1ab9ce;
         padding: 0 0  0 32px;
         line-height: 20px;
+        white-space: nowrap;
 
         span{
             border-bottom: 1px dotted #1ab9ce;;
             
         }
+        @media(max-width:1200px){
+            background:none;
+            padding:0;
+         }
+        
     }
 
     &__schedule{
@@ -191,6 +315,14 @@
         span{
             font-weight: 700;
         }
+        @media(max-width:1200px){
+           background:none;
+           padding:0;
+        }
+
+        @media(max-width: $md2 + px){
+            display:none;
+         }
     }
 
     &__cart{
@@ -206,15 +338,68 @@
             background-color: #f68038;
             border-radius: 20px;
             line-height: 25px;
-
+            right:-25px;
+            top:-3px;
             font-size: 18px;
             font-weight: 700;
             color:#fff;
 
-            transform: translate(75%, 0px);
+        
+            @media(max-width:1200px){
+               right:-10px;
+            }
         }
 
     }
 
    
+}
+
+
+// Burger
+
+.icon-menu{
+    display:none;
+    @media(max-width: $md2 + px) {
+        display:block;
+        position: relative;
+       
+        width:30px;
+        height:18px;
+        cursor: pointer;
+        z-index: 5;
+
+        span{
+            transition: all .3s ease 0s;
+            top:calc(50% - 1px);
+            left:9px;
+            position:absolute;
+            width:100%;
+            height:2px;
+            background-color: #fff;
+            &:first-child{
+                top:0px;
+            }
+
+            &:last-child{
+                top:auto;
+                bottom:0px;
+            }
+        }
+
+        &._active{
+            span{
+                transform: scale(0);
+                &:first-child {
+                    transform: rotate(-45deg);
+                    top:calc(50% - 1px);
+                }
+
+                &:last-child{
+                    transform: rotate(45deg);
+                    bottom:calc(50% - 1px);
+                }
+            }
+        }
+    }
 }

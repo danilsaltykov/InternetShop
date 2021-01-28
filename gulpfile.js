@@ -60,11 +60,7 @@ gulp.task("js", () => {
 				presets: ["@babel/env"],
 			})
 		)
-		.pipe(
-			uglify({
-				toplevel: true,
-			})
-		)
+		
 		.pipe(gulp.dest("./dist/js"))
 		.pipe(browserSync.stream());
 });
