@@ -1,0 +1,41 @@
+// Fonts
+@font-face {
+    font-family: 'Uni Sans';
+    src: local('../fontsUni Sans Heavy'), local('Uni-Sans-Heavy'),
+        url('../fonts/UniSansHeavyCAPS.woff2') format('woff2'),
+        url('../fonts/UniSansHeavyCAPS.woff') format('woff'),
+        url('../fonts/UniSansHeavyCAPS.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Play';
+    src: url('../fonts/Play-Bold.eot');
+    src: url('../fonts/Play-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Play-Bold.woff2') format('woff2'),
+        url('../fonts/Play-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700,900&display=swap&subset=cyrillic-ext');
+
+
+  $fontFamily: 'Roboto';
+
+
+
+
+  $minWidth: 320px;
+  $maxWidth: 1400;
+  $maxWidthContainer: 1180;
+
+  ._container{
+	  max-width: $maxWidthContainer + px;
+	  margin: 0 auto;
+	  padding: 0 20px;
+  }

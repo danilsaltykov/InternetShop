@@ -1,0 +1,22 @@
+// Include all your style files to  style.scss, not to index.html
+// Start settings
+@import "start-settings";
+@import "project-settings";
+@import "header";
+// Styles
+
+// Media
+
+
+body{
+    font-family: 'Play-Bold', arial;
+}
+
+.wrapper{
+    width:100%;
+    min-height: 100%;
+    overflow: hidden;
+    display:flex;
+    flex-direction: column;
+}
+

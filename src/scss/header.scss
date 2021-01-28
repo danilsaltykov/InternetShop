@@ -1,0 +1,220 @@
+.header{
+    background:url('../img/Подложка2.jpg') top no-repeat;
+}
+
+
+
+
+
+.top-header{
+    &__content{
+        display:flex;
+        align-items: center;
+        height: 90px;
+    }
+
+    &__column{
+        flex:0 1 50%;
+        &_logo{
+            align-self: flex-start;
+            padding:25px 0 0 0;
+            flex:0 0 190px;
+            text-align: center;
+        }
+    }
+}
+
+.menu{
+    &__list{
+       display:grid;
+       grid-template-columns: 110px 130px 180px;
+       li{
+        margin:1px 0;
+       }
+      
+       
+    }
+
+    &__link{
+    
+        height: 27px;
+        display:inline-flex;
+        justify-content:center;
+        align-items: center;
+        transition: all 0.3s ease 0s;
+    
+        padding: 5px 22px;
+        font-family: 'Play';
+        text-decoration: underline;
+        color:#fff;
+        
+       
+
+        &:hover{
+            border-radius: 20px;
+            background-color: #058292;
+        }
+    }
+}
+
+
+.contacts-header{
+    display:flex;
+    justify-content: center;
+
+    &__column{
+        padding: 0 30px;
+        border-right:1px solid #fff;
+
+        &:last-child{
+            border:0;
+        }
+    }
+
+    &__item{
+        &_icon{
+            background:url('../img/Иконка1.png') left no-repeat;
+            padding: 0 0 0 37px;
+        }
+    }
+
+    &__label{
+        font-size:12px;
+        font-weight: 300;
+        color:#fff;
+        margin: 0 0 5px 0;
+    }
+
+    &__phone{
+        color:#fff;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+}
+
+.bottom-header{
+    display:flex;
+    &_container{
+        height:63px;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__column{
+        flex: 0 1 calc(50% - 95px);
+    }
+}
+
+
+.actions-header{
+    display:flex; 
+    align-items: center;
+    li{
+        padding: 0 54px 0 0;
+        @media(max-width: $maxWidthContainer +px){
+            padding: 0 54 / $maxWidthContainer * 100vw 0 0;
+        }
+        
+    }
+
+    &__login{
+        background: url('../img/Иконка2.png') left no-repeat;
+        line-height: 24px;
+        display:inline-block;
+        padding: 0 0 0 36px;
+        color:#999999;
+        span{
+            border-bottom: 1px dotted #000;
+        }
+    }
+
+    &__req{
+        background: url('../img/Иконка\ при\ наведении.png') left no-repeat;
+        line-height: 24px;
+        display:inline-block;
+        padding: 0 0 0 36px;
+        span{
+            border-bottom: 1px dotted  #1ab9ce;
+            color: #1ab9ce;
+        }
+    }
+
+    &__email{
+        background: url('../img/Иконка3.png') left no-repeat;
+        line-height: 13px;
+        display:inline-block;
+        padding: 0 0 0 36px;
+        span{
+            border-bottom: 1px solid #1ab9ce;
+            color: #1ab9ce;
+        }
+    }
+}
+
+.info-header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    &__column{
+        padding: 0 54px 0 0;
+        @media(max-width: $maxWidthContainer +px){
+            padding: 0 54 / $maxWidthContainer *100vw 0 0;
+
+        }
+        &:last-child{
+            padding:0;
+        }
+    }
+
+    &__callback{
+        background: url('../img/Иконка4.png') left no-repeat;
+        display:inline-block;
+        color: #1ab9ce;
+        padding: 0 0  0 32px;
+        line-height: 20px;
+
+        span{
+            border-bottom: 1px dotted #1ab9ce;;
+            
+        }
+    }
+
+    &__schedule{
+        background: url('../img/Иконка5.png') left no-repeat;
+        padding: 0 0 0 37px;
+        font-size: 12px;
+        color:#999999;
+        font-weight: 300;
+        span{
+            font-weight: 700;
+        }
+    }
+
+    &__cart{
+        background:url('../img/Иконка\ корзины.png') 0 0 no-repeat;
+        width:43px;
+        height:43px;
+        display:inline-block;
+        position:relative;
+
+        span{
+            position:absolute;
+            padding: 0 11px;
+            background-color: #f68038;
+            border-radius: 20px;
+            line-height: 25px;
+
+            font-size: 18px;
+            font-weight: 700;
+            color:#fff;
+
+            transform: translate(75%, 0px);
+        }
+
+    }
+
+   
+}
