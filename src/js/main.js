@@ -161,7 +161,17 @@ da.init();
 
 let burger = document.querySelector('.icon-menu');
 let menu = document.querySelector('.menu__body');
+let menuParents = document.querySelectorAll('.menu-page__link_parent');
+let submenuItems = document.querySelectorAll('.submenu-page__item')
 
+for (let index = 0; index < menuParents.length; index++){
+	const menuParent = menuParents[index];
+	menuParent.addEventListener('mouseenter', function(){
+		const submenuNumber = parseInt(menuParent.getAttribute('data-item'));
+		submenuItems[submenuNumber].classList.add('_active');
+	});
+
+}
 
 burger.addEventListener('click', function(){
     burger.classList.toggle('_active');

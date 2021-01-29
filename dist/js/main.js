@@ -166,6 +166,21 @@ var da = new DynamicAdapt("max");
 da.init();
 var burger = document.querySelector('.icon-menu');
 var menu = document.querySelector('.menu__body');
+var menuParents = document.querySelectorAll('.menu-page__link_parent');
+var submenuItems = document.querySelectorAll('.submenu-page__item');
+
+var _loop2 = function _loop2(index) {
+  var menuParent = menuParents[index];
+  menuParent.addEventListener('mouseenter', function () {
+    var submenuNumber = parseInt(menuParent.getAttribute('data-item'));
+    submenuItems[submenuNumber].classList.add('_active');
+  });
+};
+
+for (var index = 0; index < menuParents.length; index++) {
+  _loop2(index);
+}
+
 burger.addEventListener('click', function () {
   burger.classList.toggle('_active');
   menu.classList.toggle('_active');

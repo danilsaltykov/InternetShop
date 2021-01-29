@@ -28,7 +28,9 @@
   $fontFamily: 'Roboto';
 
 
-
+  .rub:after{
+    content:'₽';
+  }
 
   $minWidth: 320px;
   $maxWidth: 1400;
