@@ -1,4 +1,5 @@
 $maxWidthContainer: 1180;
+$md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
@@ -6,13 +7,13 @@ $md4: 479.98;
 .header{
     background:url('../img/Подложка2.jpg') top no-repeat;
 
+    &__bottom{
+        padding:0 15px;
+    }
     @media(max-width: $md3 + px){
         background:url('../img/Подложка2.jpg') 0 -20px no-repeat;
     }
 }
-
-
-
 
 
 .top-header{
@@ -28,6 +29,10 @@ $md4: 479.98;
 
     &__logo{
         display:inline-block;
+        position: relative;
+        z-index: 5;
+
+    
 
         @media(max-width:$md3 + px){
             width:100px;
@@ -35,6 +40,15 @@ $md4: 479.98;
                 max-width:100%;
             }
         }
+
+        @media(max-width:640px){
+            width:90px;
+        }
+    }
+
+    &__contacts{
+        position: relative;
+        z-index: 5;
     }
 
     &__column{
@@ -46,6 +60,10 @@ $md4: 479.98;
             @media(min-width:$md3 + px){
                 align-self: flex-start;
                 padding:25px 0 0 0;
+              
+            }
+            @media(max-width: $md2 + px){
+                flex: 0 0 100px;
             }
         }
     }
@@ -57,16 +75,39 @@ $md4: 479.98;
         @media(max-width:$md2 + px){
             display:none;
             position:fixed;
+            opacity:1;
             height:100%;
+            visibility: hidden;
             width:100%;
             top:0;
             left:0;
             overflow: auto;
             z-index:2;
-            padding:80px 20px 30px 20px;
-            background-color: #14c0d4;
+            padding:120px 20px 30px 20px;
+            background-color: #fff;
+            &::before{
+                content:'';
+                position: fixed;
+                width:100%;
+                height:105px;
+                top:0;
+                left:0;
+                z-index:8;
+                background-color: #1ab9ce;
+
+            }
            &._active{
                display:block;
+               opacity:1;
+               visibility: visible;
+           }
+
+           @media(max-width: 640px){
+            padding:90px 20px 30px 20px;
+
+            &::before{
+                height:70px;
+            }
            }
         }
      
@@ -80,6 +121,13 @@ $md4: 479.98;
       
        @media(max-width:1200px){
            grid-template-columns: 90px 110px 160px;
+       }
+
+       @media(max-width: $md2 + px){
+           display:block;
+           li{
+               margin: 0 0 20px 0;
+           }
        }
        
     }
@@ -106,6 +154,14 @@ $md4: 479.98;
             border-radius: 20px;
             background-color: #058292;
         }
+
+        @media(max-width: $md2 + px){
+            color:#000;
+            padding: 0;
+            font-size:20px;
+        }
+
+    
     }
 }
 
@@ -120,16 +176,15 @@ $md4: 479.98;
 
     &__column{
         padding: 0 30px;
-        border-left:1px solid #fff;
 
-       
-        
-
-        &:first-child{
-            border:0;
+        @media(min-width: $md2 + px){
+            border-left:1px solid #fff;
+            &:first-child{
+                border:0;
+            }
         }
-
-        @media(max-width:1200px){
+    
+        @media(max-width:$md1 + px){
             padding:0 15px;
         }
 
@@ -137,11 +192,7 @@ $md4: 479.98;
             padding:0;
         }
 
-        @media(max-width: $md2 +px){
-            &:last-child{
-                display:none;
-            }
-        }
+     
     }
 
     &__item{
@@ -157,6 +208,12 @@ $md4: 479.98;
             }
 
 
+        }
+
+        &_second-phone{
+            @media(max-width: $md2 + px){
+                display:none;
+            }
         }
     }
 
@@ -187,7 +244,7 @@ $md4: 479.98;
             width:19px;
             height:25px;
             display:inline-block;
-            vertical-align: middle;
+            margin: 0 10px 0 0;
 
         }
 
@@ -198,15 +255,25 @@ $md4: 479.98;
 
 .bottom-header{
     display:flex;
-    &_container{
+    
+
+    &__column{
+        flex: 0 1 calc(50% - 95px);
+    }
+
+    &__row{
+       
         height:63px;
         display:flex;
         align-items: center;
         justify-content: space-between;
-    }
 
-    &__column{
-        flex: 0 1 calc(50% - 95px);
+        @media(min-width:$md1 + px){
+            padding: 0 10px;
+        }
+        @media(max-width:$md2 + px){
+            padding:0;
+        }
     }
 }
 
@@ -218,10 +285,11 @@ $md4: 479.98;
         padding: 0 54px 0 0;
         @media(max-width: $maxWidthContainer +px){
             padding: 0 30 / $maxWidthContainer * 100vw 0 0;
-        }
-
-       
-        
+        }  
+    }
+    @media(max-width: 640px){
+        justify-content: space-between;
+        margin: 0 0  15px 0;
     }
 
     &__item{
@@ -347,6 +415,18 @@ $md4: 479.98;
         
             @media(max-width:1200px){
                right:-10px;
+            }
+
+        }
+        @media(max-width: 640px){
+            width:40px;
+            height:40px;
+            span{
+                font-size:14px;
+                line-height: 20px;
+                padding: 0 5px;
+                right:-5px;
+            
             }
         }
 

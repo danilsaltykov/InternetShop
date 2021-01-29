@@ -18,7 +18,7 @@
 									<span></span>
 									<span></span>
 								</div>
-								<nav class="menu__body">
+								<nav  class="menu__body">
 									<ul class="menu__list">
 										<li><a href="" class="menu__link">Бренды</a></li>
 										<li><a href="" class="menu__link">Распродажа</a></li>
@@ -35,7 +35,7 @@
 							<a href="" class="top-header__logo"><img src="img/Logo.png" alt=""></a>
 						</div>
 
-						<div class="top-header__column">
+						<div class="top-header__column ">
 							<div class="top-header__contacts contacts-header">
 								<div class="contacts-header__column">
 									<div class="contacts-header__item contacts-header__item_icon">
@@ -46,8 +46,8 @@
 									</div>
 								</div>
 
-								<div class="contacts-header__column">
-									<div class="contacts-header__item">
+								<div class="contacts-header__column contacts-header__column_forcart">
+									<div class="contacts-header__item contacts-header__item_second-phone">
 										<div class="contacts-header__label">
 											Бесплатно для России
 										</div>
@@ -61,9 +61,10 @@
 
 
 				<div class="header__bottom bottom-header_container _container">
-					
+				
+					<div class="bottom-header__row">
 						<div class="bottom-header__column">
-							<ul data-da="menu__body,2,640" class="bottom-header__actions actions-header">
+							<ul data-da=".menu__body,640,0" class="bottom-header__actions actions-header">
 								<li>
 									<a href="" class="actions-header__item actions-header__item_login"><span>Вход</span></a>
 								</li>
@@ -76,9 +77,9 @@
 							</ul>
 						</div>
 						<div class="bottom-header__column">
-							<div class="bottom-header__info info-header">
+							<div  class="bottom-header__info info-header">
 								<div class="info-header__column">
-									<a href="" class="info-header__callback"><span>Обратный звонок</span></a>
+									<a data-da=".menu__body,640,3" href="" class="info-header__callback"><span>Обратный звонок</span></a>
 								</div>
 								<div class="info-header__column">
 									<div class="info-header__schedule">
@@ -89,19 +90,65 @@
 								
 								
 								<div class="info-header__column">
-									<a href="" class="info-header__cart">
+									<a data-da=".contacts-header__column_forcart,640,3" href="" class="info-header__cart">
 										<span>12</span>
 									</a>
 								</div>
 							</div>
 						</div>
-				
+					</div>
 				</div>
 				
 			</header>
+			<main class="page">
+				<div class="page__container _container">
+					<aside class="page__side">
+						<nav class="page__menu menu-page">
+							<div class="menu-page__header">
+								<div class="menu-page__title">
+									Каталог товаров
+								</div>
+								<div class="menu-page__burger">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div class="menu-page__body"> <!-- data-item для того, чтобы пункты связать с подпунктами-->
+								<ul class="menu-page__list">
+									<li><a data-item="0" href="" class="menu-page__link menu-page__link_parent">Беговые дорожки</a></li>
+									<li><a data-item="1" href="" class="menu-page__link menu-page__link_parent">Эллиптические тренажеры</a></li>
+									<li><a href="" class="menu-page__link">Велотренажеры</a></li>
+									<li><a href="" class="menu-page__link">Гребные тренажеры</a></li>
+									<li><a href="" class="menu-page__link">Вибромассажеры</a></li>
+									<li><a data-item="2" href="" class="menu-page__link menu-page__link_parent">Теннисные столы</a></li>
+									<li><a href="" class="menu-page__link">Баскетбол</a></li>
+									<li><a data-item="3" href="" class="menu-page__link menu-page__link_parent">Массажные кресла</a></li>
+									<li><a data-item="4" href="" class="menu-page__link menu-page__link_parent">Массажные столы</a></li>
+									<li><a href="" class="menu-page__link">Силовые тренажеры</a></li>
+									<li><a href="" class="menu-page__link">Батуты</a></li>
+									<li><a href="" class="menu-page__link">Детские городки</a></li>
+									<li><a href="" class="menu-page__link">Дачная мебель</a></li>
+									<li><a href="" class="menu-page__link">Уличные спортивные комплексы</a></li>
+									<li><a href="" class="menu-page__link">Аксессуары</a></li>
+								</ul>
+							</div>
+							<div class="menu-page__submenu submenu-page">
+
+							</div>
+						</nav>
+					</aside>
+					<div class="page__content">
+
+					</div>
+				</div>
+			</main>
+			<footer class="footer">
+
+			</footer>
 		</div>
 
-	
+		
 		<script src="js/main.js"></script>
 	</body>
 </html>

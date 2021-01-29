@@ -2,13 +2,6 @@
 // Include all your js files to  main.js, not to index.html
 "use strict";
 
-var burger = document.querySelector('.icon-menu');
-var menu = document.querySelector('.menu__body');
-burger.addEventListener('click', function () {
-  burger.classList.toggle('_active');
-  menu.classList.toggle('_active');
-});
-
 function DynamicAdapt(type) {
   this.type = type;
 }
@@ -171,3 +164,9 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 var da = new DynamicAdapt("max");
 da.init();
+var burger = document.querySelector('.icon-menu');
+var menu = document.querySelector('.menu__body');
+burger.addEventListener('click', function () {
+  burger.classList.toggle('_active');
+  menu.classList.toggle('_active');
+});

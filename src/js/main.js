@@ -4,18 +4,6 @@
 
 "use strict";
 
-
-let burger = document.querySelector('.icon-menu');
-let menu = document.querySelector('.menu__body');
-
-
-burger.addEventListener('click', function(){
-    burger.classList.toggle('_active');
-    menu.classList.toggle('_active');
-})
-
-
-
 function DynamicAdapt(type) {
 	this.type = type;
 }
@@ -171,5 +159,11 @@ const da = new DynamicAdapt("max");
 da.init();
 
 
+let burger = document.querySelector('.icon-menu');
+let menu = document.querySelector('.menu__body');
 
 
+burger.addEventListener('click', function(){
+    burger.classList.toggle('_active');
+    menu.classList.toggle('_active');
+})
