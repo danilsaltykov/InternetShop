@@ -256,47 +256,7 @@
 
 											<li><a href="" class="menu-page__link">Баскетбол</a></li>
 
-											<li class="menu-page__parent">
-												<a  href="" class="menu-page__link">Эллиптические тренажеры</a>
-												<div class="menu-page__submenu submenu-page">
-													
-														<div class="submenu-page__item">
-															<ul class="submenu-page__menu">
-																<li><a href="" class="submenu-page__link">Всепогодный</a></li>
-																<li><a href="" class="submenu-page__link">Для помещений</a></li>
-																<li><a href="" class="submenu-page__link">Профессиональный</a></li>
-																<li><a href="" class="submenu-page__link">Любительский</a></li>
-															</ul>
-
-														<div class="submenu-page__product">
-															<div class="item-product">
-																<div class="item-product__labels">
-																	<div class="item-product__label">Товар дня</div>
-																</div>
-
-
-																<a href="" class="item-product__image">
-																	<img src="img/tennis.jpg" alt="Тенисный стол. Зелёный.">
-																</a>
-
-															<div class="item-product__body">
-																	<a href="" class="item-product__title">
-																		Домашний теннисный стол Donic Indoor Roller 800 Green
-																	</a>
-
-																	<div class="item-product__footer">
-																									
-																		<a href="" class="item-product__add">
-																		
-																		</a>
-																		<div class="item-product__price rub">64 990</div>														
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-												</div>
-											</li>
+											<li><a href="" class="menu-page__link">Эллиптические тренажеры</a></li>
 											<li><a href="" class="menu-page__link">Массажные столы</a></li>
 											<li><a href="" class="menu-page__link">Силовые тренажеры</a></li>
 											<li><a href="" class="menu-page__link">Батуты</a></li>
@@ -309,11 +269,12 @@
 							
 						
 						</nav>
-					</aside>
+					</aside>  <!--	let searchQuantity = pageSelect.querySelector('.search-page__guantity');
+						searchQuantity.innerHTML = searchQuantity.getAttribute('data-text') + checkboxActiveCategories.length;-->
 					<div class="page__content">
 						<form action='#' class="page__search search-page">
 								<div class="search-page__select">
-									<div class="search-page__title"><span>Везде</span></div>
+									<div class="search-page__title"><span>Везде</span><span data-text="Выбрано:"  class="search-page__quantity"></span></div>
 									<div class="search-page__categories categories-search">
 										<div class="categories-search__row">
 											<div class="categories-search__column">
@@ -435,6 +396,34 @@
 								</div>
 								<button type='submit' class="search-page__btn btn">Найти</button>
 						</form>
+						<div class="page__slider mainslider">
+							<div class="mainslider__body _swiper">
+								<div class="mainslider__slide">
+									<div class="mainslider__content content-mainslider">
+										<div class="content-mainslider__title">
+											<span>Мега</span>Распродажа
+										</div>
+										<div class="content-mainslider__text text-mainslider">
+											<p><span class="text-mainslider__text1">Успей купить тренажеры</span></p>
+											<p class="text-mainslider__text2">по старой цене</p>
+											<p>до их <span class="text-mainslider__text3">повышения</span></p>
+										</div>
+										<div class="content-mainslider__footer">
+											<div class="content-mainslider__price rub">от 45 000</div>
+											<a href="" class="content-mainslide__button">
+												<span>Подробнее</span>
+											</a>
+										</div>
+									</div>
+									<div class="mainslider__image">
+										<img src="img/Картинка.jpg" alt="">
+									</div>
+								</div>
+							</div>
+							<div class="mainslider__dotts">
+
+							</div>
+						</div>
 
 					</div>
 				</div>
@@ -444,7 +433,7 @@
 			</footer>
 		</div>
 
-		
+		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
