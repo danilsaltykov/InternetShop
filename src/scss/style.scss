@@ -28,6 +28,8 @@ body{
     position:relative;
     
     &__parent{
+     
+     
         .menu-page__link{
             &::after{
                 content:'';
@@ -45,7 +47,8 @@ body{
         &._active{
             .submenu-page__item{
                 transform: translate(0, 0);
-                z-index:2;
+            
+               
             }
             .menu-page__link{
                 background-color: #098494;
@@ -85,6 +88,7 @@ body{
 
     &__body{
         display:none;
+        z-index: 10;
 
         &._active{
             display:block;
@@ -161,13 +165,14 @@ body{
         top:0;
         height:100%;
         overflow: hidden;
+ 
     }
 
    
 }
 
 .submenu-page{
-  
+
 
     &__item{
         border: 2px solid #098494;
@@ -179,7 +184,7 @@ body{
         top:0;
         transform: translate(-100%, 0px);
         transition: all .3s linear;
-
+        z-index:15;
        
     }
 
@@ -310,7 +315,8 @@ body{
 
 
 .page{
-    padding: 20px 0 0 0;
+    padding:50px 0 200px 0;
+    flex:1 1 auto;
 
     &__container{
         display:flex;
@@ -341,6 +347,23 @@ body{
         align-items: center;
         cursor: pointer;
    
+     
+      
+       
+    }
+
+    &__title{
+        display:flex;
+        align-items: center;
+        color:#666666;
+       
+        font-weight: 300;
+      
+        span{
+            margin: 0 13px;
+            border-bottom: 1px dashed;
+        }
+
         &::before{
             content: '';
             width:17px;
@@ -354,20 +377,15 @@ body{
             width: 10px;
             height: 10px;
             background: url('../img/стрелкавниз.png')0 0 no-repeat;
+            transition: .3s linear;
         }
 
-        span{
-            color:#666666;
-            margin: 0 13px;
-            font-weight: 300;
-            border-bottom: 1px dashed;
+        &._active{
+            &::after{
+                transform: rotate(-180deg);
+            }
         }
-    }
 
-    &__title{
-        display:flex;
-
-        align-items: center;
     }
 
     &__input{
@@ -386,7 +404,67 @@ body{
         left:0;
         width:100%;
     }
+
    
+ 
+   
+ }
+
+ .categories-search{
+        border:1px solid #f3f3f3;
+        background-color: #fff;
+        display:none;
+
+        &::after{
+            content:'';
+            background-color: #f68038;
+            height:4px;
+            width:100%;
+            position:absolute;
+            bottom:0;
+            left:0;
+        }
+
+        &__row{
+            display:flex;
+        }
+      
+
+        &__list{
+            li{
+                margin: 0 0 20px 0;
+
+                &:last-child{
+                    margin:0;
+                }
+            }
+        }
+
+        &__checkbox{
+
+            .checkbox__input{
+                &:checked + .checkbox__text{
+                    color:#f68038;
+                }
+            }
+            .checkbox__text{
+                color:#999;
+                &::before{
+                    display:none;
+                }
+            }
+        }
+   
+
+    &__column{
+        flex: 1 1 33.333%;
+        padding: 27px 40px;
+        border-right: 1px solid #f3f3f3;
+
+        &:last-child{
+            border:0;
+        }
+    }
  }
 
     

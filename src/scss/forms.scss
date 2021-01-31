@@ -31,3 +31,45 @@
     border:none;
 
 }
+
+
+.checkbox{
+    position:relative;
+
+    &__input{
+        position: absolute;
+        width:0;
+        height:0;
+        opacity:0;
+        visibility: hidden;
+        &:checked + .checkbox__text:before{
+            background:red;
+        }
+
+    }
+
+    &__text{
+        display:inline-flex;
+        align-items: center;
+        position: relative;
+        font-size:16px;
+        color:#fff;
+        letter-spacing: -0.3px;
+        line-height: calc(20 / 16);
+        cursor: pointer;
+        &:before{
+            content:'';
+            align-self: flex-start;
+            margin: 0 14px 0 0;
+            flex: 0 0 20px;
+            left:0;
+            top:0;
+            width:20px;
+            height:18px;
+            background: #fff;
+            border:1px solid #a7a9ac;
+        }
+
+
+    }
+}

@@ -191,6 +191,16 @@ menuPageBurger.addEventListener('click', function(){
 	
 });
 
+let pageSelect = document.querySelector('.search-page__title');
+let categoriesSearch = document.querySelector('.categories-search');
+
+pageSelect.addEventListener('click', function(){
+	pageSelect.classList.toggle('_active');
+	_slideToggle(categoriesSearch);
+})
+
+console.log(pageSelect);
+
 
 //SlideToggle
 

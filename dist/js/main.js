@@ -192,7 +192,15 @@ menuPageBurger.addEventListener('click', function () {
   menuPageBurger.classList.toggle('_active');
 
   _slideToggle(menuPageBody);
-}); //SlideToggle
+});
+var pageSelect = document.querySelector('.search-page__title');
+var categoriesSearch = document.querySelector('.categories-search');
+pageSelect.addEventListener('click', function () {
+  pageSelect.classList.toggle('_active');
+
+  _slideToggle(categoriesSearch);
+});
+console.log(pageSelect); //SlideToggle
 
 var _slideUp = function _slideUp(target) {
   var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 500;

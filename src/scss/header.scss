@@ -321,7 +321,7 @@ $md4: 479.98;
                 border-bottom: 1px solid;
             }
         }  
-        @media(max-width:1200px){
+        @media(min-width:1200px){
             padding: 0 0 0 30px;
             &:hover{
                 span{
