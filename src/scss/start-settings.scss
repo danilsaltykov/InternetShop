@@ -103,6 +103,9 @@ section {
 body {
 	line-height: 1;
 }
+input:focus,input:active{
+	outline:none;
+}
 a{
 	text-decoration: none;
 }

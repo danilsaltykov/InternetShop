@@ -53,13 +53,8 @@ gulp.task("css", () => {
 // JS
 gulp.task("js", () => {
 	return gulp
-		.src(["./src/js/main.js"])
-		.pipe(concat("main.js"))
-		.pipe(
-			babel({
-				presets: ["@babel/env"],
-			})
-		)
+		.src(["./src/js/*.js"])
+		
 		
 		.pipe(gulp.dest("./dist/js"))
 		.pipe(browserSync.stream());
